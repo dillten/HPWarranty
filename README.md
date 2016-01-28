@@ -1,5 +1,5 @@
 # HPWarranty PowerShell Module
-## As HP has recently split into two different companies, this is a complete rewrite, and is still beta.  Cmdlet names and functionallity may change, I will not be supporting backwards compatibility.
+## As HP has recently split into two different companies, this is a complete rewrite, and is still beta.  Cmdlet names and functionality may change, I will not be supporting backwards compatibility.
 
 This module can be installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/HPWarranty/).  You need [WMF 5](https://www.microsoft.com/en-us/download/details.aspx?id=44987) to use this feature.
 ```PowerShell
@@ -15,6 +15,7 @@ This is still very beta, so please report any issues.  Thanks.
 * [Get-HPIncWarrantyEntitlement](https://github.com/dotps1/HPWarranty/wiki/Get-HPIncWarrantyEntitlement)
 * [Get-HPSystemInformationFromCMDB](https://github.com/dotps1/HPWarranty/wiki/Get-HPSystemInformationFromCMDB)
 * [Get-HPWarrantyEntitlement](https://github.com/dotps1/HPWarranty/wiki/Get-HPWarrantyEntitlement)
+* Get-HPEServerWarrantyEntitlement - An alternate method for retrieving support status for HP Enterprise Servers.
 
 Example 1:
 ```PowerShell
