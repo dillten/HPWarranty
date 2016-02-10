@@ -98,22 +98,21 @@ Function Get-HPEServerWarrantyEntitlement {
 
             if ($entitlement -ne $null) {
                 $contracts = $entitlement.d | ConvertFrom-Json
-                    if ($contracts -ne $null) {
-                        foreach ($contract in $contracts) {
-                            [PSCustomObject]@{
-                                'ComputerName' = $ComputerName[$i]
-                                'SerialNumber' = $SerialNumber
-                                'ProductNumber' = $ProductNumber
-                                'ActiveWarrantyEntitlement' = $contract.status
-                                'OverallWarrantyStartDate' = $contract.startDate
-                                'OverallWarrantyEndDate' = $contract.endDate
-                                'WarrantyType' = $contract.title
-                                'WarrantyDeliverables' = $contract.deliverables
-                                'WarrantyOfferCode' = $contract.offerCode
-                            }
-                        }
-                    }
-                }
+				if ($contracts -ne $null) {
+					foreach ($contract in $contracts) {
+						[PSCustomObject]@{
+							'ComputerName' = $ComputerName[$i]
+							'SerialNumber' = $SerialNumber
+							'ProductNumber' = $ProductNumber
+							'ActiveWarrantyEntitlement' = $contract.status
+							'OverallWarrantyStartDate' = $contract.startDate
+							'OverallWarrantyEndDate' = $contract.endDate
+							'WarrantyType' = $contract.title
+							'WarrantyDeliverables' = $contract.deliverables
+							'WarrantyOfferCode' = $contract.offerCode
+						}
+					}
+				}
             } else {
                 Write-Error -Message 'No entitlement found.'
                 continue
